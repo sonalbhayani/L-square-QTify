@@ -3,7 +3,7 @@
   color: var(--color-primary) !important;
 
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 
   text-transform: none;
   padding: 10px 16px;
