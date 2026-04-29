@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar/Navbar';
-// import Hero from './components/Hero/Hero';
+import Hero from './components/Hero/Hero';
 // import Carousel from './components/Carousel/Carousel';
 // import { useState,useEffect } from 'react';
 function Home() {
@@ -16,8 +16,8 @@ function Home() {
   return (
    <>
   <Navbar />
-   {/* <Hero />
-   <Carousel/> */}
+   <Hero />
+   {/* <Carousel/> */}
    </>
   );
 }
