@@ -67,8 +67,9 @@ function Search({ searchData, placeholder }) {
           onSubmit(e, value);
         }}
       >
-        <div {...getRootProps()}>
+        <div>
           <input
+            type="text"
             name="album"
             className={styles.search}
             {...getInputProps()}
