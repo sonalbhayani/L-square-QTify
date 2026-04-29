@@ -3,7 +3,9 @@ import styles from "./Button.module.css";
 
 function Button({ onClick }) {
     return (
-  <MuiButton  variant="text" onClick={onClick} className={styles.button}>
+  <MuiButton  variant="contained"
+      onClick={onClick}
+      className={styles.button}>
     Give Feedback
   </MuiButton >
     );
