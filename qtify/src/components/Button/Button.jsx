@@ -4,6 +4,7 @@ import styles from "./Button.module.css";
 function Button({ onClick }) {
     return (
   <MuiButton  variant="contained"
+      component="button" 
       onClick={onClick}
       className={styles.button}>
     Give Feedback
