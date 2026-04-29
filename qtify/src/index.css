@@ -15,4 +15,8 @@ code {
 :root {
   --color-black: #121212;
   --color-primary: #34c94b; /* green */
+  --color-white: #ffffff;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }

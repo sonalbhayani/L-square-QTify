@@ -1,0 +1,30 @@
+
+.section {
+  width: auto;
+}
+.button{
+   margin-right: 141px !important;
+}
+    
+
+.box{
+    width: 100%;
+   
+    /* background-color: var(--color-black); */
+    /* color: var(--color-white); */
+
+   
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+.h3{
+    margin-left: -105px !important;
+}
+.home{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

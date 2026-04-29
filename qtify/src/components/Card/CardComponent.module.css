@@ -1,0 +1,13 @@
+.chip{
+    background-color: var(--color-black) !important;
+    color: var(--color-white)   !important;
+    padding: 8px 4px    !important;
+    /* height: 23px; */
+    border-radius: 10px !important;
+}
+.card{
+    width: 159px !important;
+    height: 205px !important;
+    border-radius: 10px !important;
+    /* margin: 10px; */
+}
