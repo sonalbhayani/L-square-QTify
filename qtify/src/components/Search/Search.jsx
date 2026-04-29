@@ -38,7 +38,7 @@ const Listbox = styled("ul")(({ theme }) => ({
 
 function Search({ searchData, placeholder }) {
   const {
-    getRootProps,
+    // getRootProps,
     // getInputLabelProps,
     value,
     getInputProps,
