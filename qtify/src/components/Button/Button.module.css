@@ -1,8 +1,14 @@
-.button{
-    font-family: Poppins, sans-serif !important;
-    background-color: #121212 !important;
-    color: #34C94B !important;
-    border: 1px solid #121212 !important;
-    border-radius: 12px !important;
-    padding: 10px 16px !important;
+.button {
+  background-color: var(--color-black) !important;
+  color: var(--color-primary) !important;
+
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+
+  text-transform: none;
+  padding: 10px 16px;
+}
+
+.button:hover {
+  cursor: pointer;
 }
