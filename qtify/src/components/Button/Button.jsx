@@ -1,11 +1,11 @@
-import { Button as muiButton } from "@mui/material";
+import { Button as MuiButton  } from "@mui/material";
 import styles from "./Button.module.css";
 
-function Button(onClick) {
+function Button({ onClick }) {
     return (
-  <muiButton variant="text" onClick={onClick} className={styles.button}>
+  <MuiButton  variant="text" onClick={onClick} className={styles.button}>
     Give Feedback
-  </muiButton>
+  </MuiButton >
     );
 }
 export default Button;
