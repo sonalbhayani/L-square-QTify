@@ -2,7 +2,7 @@ import Navbar from './components/Navbar/Navbar';
 import PropTypes from 'prop-types';
 import Hero from './components/Hero/Hero';
 import CardComponent from './components/Card/CardComponent';
-import axios, { all } from 'axios';
+import axios from 'axios';
 import {Grid,Container,Box,Tabs ,Tab  } from '@mui/material';
 import styles from './Home.module.css';
 import Button from "./components/Button/Button";
