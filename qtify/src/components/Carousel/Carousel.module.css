@@ -1,0 +1,6 @@
+/* Carousel.module.css */
+.swiper {
+  width: 100%;
+  max-width: 1200px;   /* 👈 control total width */
+  margin: 0 auto;      /* center it */
+}
