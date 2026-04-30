@@ -85,10 +85,7 @@ useEffect(() => {
         }
     };
    fetchData();
-    setFilteredSongs(allSongs);
   
-
-
 }, []);
 useEffect(() => {
      setFilteredSongs(allSongs);
