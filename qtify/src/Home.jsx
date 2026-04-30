@@ -30,8 +30,8 @@ useEffect(() => {
 }, []);
 const [topToggle, setTopToggle] = useState(false);
 const [newToggle, setNewToggle] = useState(false);
-const visibleTopAlbums = topToggle ? topAlbums : topAlbums.slice(0, 6);
-const visibleNewAlbums = newToggle ? newAlbums : newAlbums.slice(0, 6);
+const visibleTopAlbums = topToggle ? topAlbums : topAlbums;
+const visibleNewAlbums = newToggle ? newAlbums : newAlbums;
        
     
 
