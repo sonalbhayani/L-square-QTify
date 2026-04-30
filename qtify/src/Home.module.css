@@ -1,9 +1,10 @@
 
 .section {
   width: auto;
+  margin-top: 10px  !important;
 }
 .button{
-   margin-right: 141px !important;
+   margin-right: 40px !important;
 }
     
 

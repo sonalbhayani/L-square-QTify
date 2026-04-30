@@ -10,21 +10,28 @@ import Button from "./components/Button/Button";
 // import Carousel from './components/Carousel/Carousel';
 import { useState,useEffect } from 'react';
 function Home() {
-    const [searchData, setSearchData] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    const [toggle, setToggle] = useState(false);
-    const visibleData = toggle ? searchData : searchData.slice(0, 8);
-    useEffect(() => {
-       const fetchData = async () => {  
-        try {
-            const response = await axios.get('https://qtify-backend.labs.crio.do/albums/top');
-            setSearchData(response.data);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }           
-      }
-       fetchData();    
-    },[]);   
+    const [topAlbums, setTopAlbums] = useState([]);
+const [newAlbums, setNewAlbums] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const topRes = await axios.get("https://qtify-backend.labs.crio.do/albums/top");
+      const newRes = await axios.get("https://qtify-backend.labs.crio.do/albums/new");
+
+      setTopAlbums(topRes.data);
+      setNewAlbums(newRes.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  fetchData();
+}, []);
+const [topToggle, setTopToggle] = useState(false);
+const [newToggle, setNewToggle] = useState(false);
+const visibleTopAlbums = topToggle ? topAlbums : topAlbums.slice(0, 7);
+const visibleNewAlbums = newToggle ? newAlbums : newAlbums.slice(0, 7);
        
     
 
@@ -37,17 +44,37 @@ function Home() {
    <Box component="section" className={styles.section}
      sx={{ px: { xs: 2, md: 4, lg: 6 } }}>
         <Container className={styles.box}>
-       <h3 className={styles.h3}>Top Albums</h3>
-        <Button
-            onClick={() => setToggle((prev) => !prev)}
-            text={toggle ? "Collapse" : "Show All"}
-            className={styles.button}
-        />
-</Container>
+        <h3 className={styles.h3}>Top Albums</h3>
+            <Button
+                onClick={() => setTopToggle((prev) => !prev)}
+                text={topToggle ? "Collapse" : "Show All"}
+                className={styles.button}
+            />
+            </Container>
 
        
         <Grid container spacing={2}>
-            {visibleData.map((item) => (
+            {visibleTopAlbums.map((item) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={item.id}>
+                <CardComponent data={item} />
+                </Grid>
+            ))}
+            </Grid>
+    </Box>
+    <Box component="section" className={styles.section}
+     sx={{ px: { xs: 2, md: 4, lg: 6 } }}>
+        <Container className={styles.box}>
+        <h3 className={styles.h3}>New  Albums</h3>
+            <Button
+                onClick={() => setNewToggle((prev) => !prev)}
+                text={newToggle ? "Collapse" : "Show All"}
+                className={styles.button}
+            />
+            </Container>
+
+       
+        <Grid container spacing={2}>
+            {visibleNewAlbums.map((item) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={item.id}>
                 <CardComponent data={item} />
                 </Grid>

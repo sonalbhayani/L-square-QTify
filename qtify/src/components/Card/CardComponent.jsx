@@ -13,7 +13,7 @@ export default function CardComponent({data}) {
   return (<>
     <Card sx={{ maxWidth: 159 }} className='card'>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 140 ,width: 159}}
         image={image}
         title={title}
       />
