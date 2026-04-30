@@ -1,12 +1,19 @@
 
 .section {
   width: auto;
+  display: block;
   margin-top: 10px  !important;
+
 }
-.button{
-   margin-right: 40px !important;
+
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
 }
-    
 
 .box{
     width: 100%;
@@ -22,9 +29,9 @@
     /* gap: 20px; */
 }
 
-.h3{
+/* .h3{
     margin-left: -105px !important;
-}
+} */
 .home{
     background-color: var(--color-black);
     color: var(--color-white);

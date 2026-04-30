@@ -10,7 +10,7 @@ export default function CardComponent({data}) {
   const handleClick = () => {
     console.info('You clicked the Chip.');
   };
-  return (<>
+  return (
     <Card sx={{ maxWidth: 159 }} className='card'>
       <CardMedia
         sx={{ height: 140 ,width: 159}}
@@ -22,9 +22,10 @@ export default function CardComponent({data}) {
           <Chip label={`${follows} Follows `} variant="outlined" onClick={handleClick} className={styles.chip}/>
         </Typography>
       </CardContent>
-
+      <Typography variant="body2">
+          {title}
+        </Typography>
     </Card>
-            {title}
-            </>
+            
   );
 }

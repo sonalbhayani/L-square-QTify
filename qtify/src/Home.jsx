@@ -30,8 +30,8 @@ useEffect(() => {
 }, []);
 const [topToggle, setTopToggle] = useState(false);
 const [newToggle, setNewToggle] = useState(false);
-const visibleTopAlbums = topToggle ? topAlbums : topAlbums.slice(0, 7);
-const visibleNewAlbums = newToggle ? newAlbums : newAlbums.slice(0, 7);
+const visibleTopAlbums = topToggle ? topAlbums : topAlbums.slice(0, 6);
+const visibleNewAlbums = newToggle ? newAlbums : newAlbums.slice(0, 6);
        
     
 
@@ -40,15 +40,14 @@ const visibleNewAlbums = newToggle ? newAlbums : newAlbums.slice(0, 7);
    <div className={styles.home}>
   <Navbar />
    <Hero />
-   <Container maxWidth="xl">
+   <Container maxWidth="xl" className={styles.container}>
    <Box component="section" className={styles.section}
      sx={{ px: { xs: 2, md: 4, lg: 6 } }}>
         <Container className={styles.box}>
-        <h3 className={styles.h3}>Top Albums</h3>
+        <h3 >Top Albums</h3>
             <Button
                 onClick={() => setTopToggle((prev) => !prev)}
                 text={topToggle ? "Collapse" : "Show All"}
-                className={styles.button}
             />
             </Container>
 
