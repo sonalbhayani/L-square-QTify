@@ -21,10 +21,11 @@ export default function CardComponent({data}) {
         <Typography gutterBottom variant="h5" component="div">
           <Chip label={`${follows} Follows `} variant="outlined" onClick={handleClick} className={styles.chip}/>
         </Typography>
-      </CardContent>
-      <Typography variant="body2">
+        <Typography variant="body2">
           {title}
         </Typography>
+      </CardContent>
+      
     </Card>
             
   );
