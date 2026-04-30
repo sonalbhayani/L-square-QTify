@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import styles from './CardComponent.module.css';
 
 export default function CardComponent({data}) {
-  const { title, image, follows } = data;
+  const { title, image, follows,likes } = data;
   const handleClick = () => {
     console.info('You clicked the Chip.');
   };
@@ -17,9 +17,10 @@ export default function CardComponent({data}) {
         image={image}
         title={title}
       />
-      <CardContent>
+      <CardContent  sx={{ height: 70}}>
         <Typography gutterBottom variant="h5" component="div">
-          <Chip label={`${follows} Follows `} variant="outlined" onClick={handleClick} className={styles.chip}/>
+          {follows && (<Chip label={`${follows} Follows `} variant="outlined" onClick={handleClick} className={styles.chip}/>)}
+          {likes && (<Chip label={`${likes} Likes `} variant="outlined" onClick={handleClick} className={styles.chip}/>)}
         </Typography>
         <Typography variant="body2">
           {title}
